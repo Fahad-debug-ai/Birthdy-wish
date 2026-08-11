@@ -1,0 +1,427 @@
+/* Aurora */
+.aurora{
+    animation:auroraMove 10s ease-in-out infinite alternate;
+}
+
+@keyframes auroraMove{
+    from{
+        transform:translateY(0) translateX(0);
+    }
+
+    to{
+        transform:translateY(120px) translateX(-120px);
+    }
+}
+
+/* Card */
+
+.landing-card{
+    animation:cardShow 1.2s ease;
+}
+
+@keyframes cardShow{
+    from{
+        opacity:0;
+        transform:translateY(60px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===========================
+   Floating Particles
+=========================== */
+
+.particles{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.particle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.7);
+    animation:floatParticle linear infinite;
+}
+
+@keyframes floatParticle{
+    0%{
+        transform:translateY(0) scale(1);
+        opacity:0;
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-250px) scale(0);
+        opacity:0;
+    }
+}
+
+/* ===========================
+   Ripple
+=========================== */
+
+#lockForm button{
+    position:relative;
+    overflow:hidden;
+}
+
+.ripple{
+    position:absolute;
+    width:15px;
+    height:15px;
+    background:rgba(255,255,255,.6);
+    border-radius:50%;
+    transform:translate(-50%,-50%);
+    animation:ripple .6s linear;
+}
+
+@keyframes ripple{
+    from{
+        width:0;
+        height:0;
+        opacity:1;
+    }
+
+    to{
+        width:350px;
+        height:350px;
+        opacity:0;
+    }
+}
+
+/*====================================
+        HERO ANIMATIONS
+====================================*/
+
+.hero-container{
+    animation:heroFloat 4s ease-in-out infinite;
+}
+
+@keyframes heroFloat{
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/*====================================
+        PAGE REVEAL
+====================================*/
+
+.reveal{
+    animation:pageReveal .9s ease forwards;
+}
+
+@keyframes pageReveal{
+    from{
+        opacity:0;
+        transform:translateY(70px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/*====================================
+        OVERLAY
+====================================*/
+
+.overlay-active{
+    opacity:1;
+    backdrop-filter:blur(18px);
+}
+
+/*==========================
+SHAKE
+==========================*/
+
+.shake{
+    animation:shake .6s;
+}
+
+@keyframes shake{
+    0%{transform:translateX(0);}
+    20%{transform:translateX(-8px);}
+    40%{transform:translateX(8px);}
+    60%{transform:translateX(-8px);}
+    80%{transform:translateX(8px);}
+    100%{transform:translateX(0);}
+}
+
+/*==================================================
+                HERO ANIMATIONS
+==================================================*/
+
+.image-frame{
+    animation:heroFloat 5s ease-in-out infinite;
+}
+
+@keyframes heroFloat{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-18px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+.image-ring{
+    animation:rotateRing 30s linear infinite;
+}
+
+@keyframes rotateRing{
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.floating-icon{
+    animation:iconFloat 4s ease-in-out infinite;
+}
+
+@keyframes iconFloat{
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/*===============================
+IMAGE PARALLAX
+===============================*/
+
+.image-frame{
+    transition:transform .25s linear;
+}
+
+/*==================================================
+                GALLERY ANIMATIONS
+==================================================*/
+
+.gallery-card{
+    animation:galleryFloat 5s ease-in-out infinite;
+}
+
+.gallery-card:nth-child(2){
+    animation-delay:.4s;
+}
+
+.gallery-card:nth-child(3){
+    animation-delay:.8s;
+}
+
+@keyframes galleryFloat{
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+.gallery-card::after{
+    content:"";
+    position:absolute;
+    top:-120%;
+    left:-40%;
+    width:60%;
+    height:250%;
+    background:
+    linear-gradient(
+    rgba(255,255,255,0),
+    rgba(255,255,255,.18),
+    rgba(255,255,255,0)
+    );
+    transform:rotate(25deg);
+    transition:.8s;
+}
+
+.gallery-card:hover::after{
+    left:140%;
+}
+
+/*==================================
+            OPEN STATE
+==================================*/
+
+#giftBox.open{
+    animation:none;
+    transform:scale(1.08);
+}
+
+#giftBox.open .gift-lid{
+    transform:
+        translateY(-65px)
+        rotate(-18deg);
+}
+
+/*==================================
+            REVEAL CARD
+==================================*/
+
+.gift-hidden{
+    display:none;
+}
+
+#giftReveal{
+    width:min(700px,92%);
+    margin:auto;
+    opacity:0;
+    transform:translateY(40px);
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+#giftReveal.show{
+    display:block;
+    opacity:1;
+    transform:translateY(0);
+}
+
+.gift-card{
+    padding:38px;
+    border-radius:28px;
+    text-align:center;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(18px);
+    box-shadow:
+        0 25px 45px rgba(0,0,0,.28);
+}
+
+.gift-card h3{
+    color:#fff;
+    font-size:2rem;
+    margin-bottom:18px;
+}
+
+.gift-card p{
+    color:#dbe6ff;
+    line-height:1.9;
+    font-size:1rem;
+}
+
+/*==================================
+            BUTTON
+==================================*/
+
+#openLetterBtn{
+    margin-top:30px;
+    padding:15px 34px;
+    border:none;
+    border-radius:16px;
+    cursor:pointer;
+    color:#fff;
+    font-size:1rem;
+    font-weight:600;
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    transition:.35s;
+    box-shadow:
+        0 15px 30px rgba(79,209,255,.22);
+}
+
+#openLetterBtn:hover{
+    transform:
+        translateY(-4px);
+}
+
+/*==================================
+            FLOATING
+==================================*/
+
+@keyframes giftFloat{
+    0%{
+        transform:
+            translateY(0);
+    }
+
+    50%{
+        transform:
+            translateY(-12px);
+    }
+
+    100%{
+        transform:
+            translateY(0);
+    }
+}
+
+/*==================================
+            RESPONSIVE
+==================================*/
+
+@media(max-width:768px){
+    #gift{
+        padding:90px 20px;
+    }
+
+    #giftHeading{
+        font-size:2.2rem;
+    }
+
+    #giftBox{
+        width:180px;
+        height:180px;
+    }
+
+    .gift-lid{
+        width:180px;
+        height:60px;
+    }
+
+    .gift-body{
+        width:180px;
+        height:130px;
+    }
+
+    .gift-card{
+        padding:28px 22px;
+    }
+}

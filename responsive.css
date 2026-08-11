@@ -1,0 +1,190 @@
+/*==================================================
+                TABLET
+==================================================*/
+
+@media (max-width:1024px){
+
+    .hero-container{
+
+        grid-template-columns:1fr;
+
+        gap:60px;
+
+        text-align:center;
+
+    }
+
+    .gallery-grid,
+    .reasons-grid,
+    .favorites-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .timeline-item{
+
+        width:100%;
+
+    }
+
+    .finale-card{
+
+        padding:50px 35px;
+
+    }
+
+}
+
+/*==================================================
+                MOBILE
+==================================================*/
+
+@media (max-width:768px){
+
+    section{
+
+        padding:90px 20px;
+
+    }
+
+    .hero-title{
+
+        font-size:2.6rem;
+
+    }
+
+    #girlName{
+
+        font-size:2rem;
+
+    }
+
+    .gallery-grid,
+    .reasons-grid,
+    .favorites-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #giftBox{
+
+        transform:scale(.85);
+
+    }
+
+    #envelope{
+
+        transform:scale(.90);
+
+    }
+
+    .timeline-card{
+
+        width:100%;
+
+    }
+
+    .finale-card{
+
+        padding:40px 25px;
+
+    }
+
+}
+
+/*==================================================
+            SMALL MOBILE
+==================================================*/
+
+@media (max-width:480px){
+
+    .hero-title{
+
+        font-size:2.1rem;
+
+    }
+
+    #girlName{
+
+        font-size:1.7rem;
+
+    }
+
+    .hero-content p{
+
+        font-size:.95rem;
+
+    }
+
+    .gallery-header h2,
+    .gift-header h2,
+    .letter-header h2,
+    .timeline-header h2,
+    .reasons-header h2,
+    .favorites-header h2,
+    .finale-card h2{
+
+        font-size:2rem;
+
+    }
+
+    #giftBox{
+
+        transform:scale(.72);
+
+    }
+
+    #envelope{
+
+        transform:scale(.82);
+
+    }
+
+    .reason-card,
+    .favorite-card{
+
+        padding:28px 22px;
+
+    }
+
+    #celebrateBtn{
+
+        width:100%;
+
+    }
+
+}
+
+/*==================================================
+            EXTRA SMALL
+==================================================*/
+
+@media (max-width:360px){
+
+    html{
+
+        font-size:14px;
+
+    }
+
+    .hero-title{
+
+        font-size:1.8rem;
+
+    }
+
+    #giftBox{
+
+        transform:scale(.65);
+
+    }
+
+    #envelope{
+
+        transform:scale(.75);
+
+    }
+
+}

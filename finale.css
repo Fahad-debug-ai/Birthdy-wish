@@ -1,0 +1,182 @@
+/*==================================================
+                GRAND FINALE
+==================================================*/
+#finale{
+    position:relative;
+    padding:160px 20px;
+    overflow:hidden;
+}
+
+.finale-bg{
+    position:absolute;
+    inset:0;
+    z-index:-1;
+}
+
+.finale-glow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.22;
+}
+
+.glow-1{
+    width:350px;
+    height:350px;
+    background:#ff78be;
+    top:-120px;
+    left:-120px;
+}
+
+.glow-2{
+    width:350px;
+    height:350px;
+    background:#6b7dff;
+    bottom:-120px;
+    right:-120px;
+}
+
+.finale-card{
+    max-width:820px;
+    margin:auto;
+    padding:60px 45px;
+    text-align:center;
+    border-radius:32px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:
+        0 25px 50px rgba(0,0,0,.28);
+}
+
+.finale-badge{
+    display:inline-block;
+    padding:10px 24px;
+    border-radius:999px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    color:#fff;
+}
+
+.finale-card h2{
+    font-size:3.3rem;
+    color:#fff;
+    margin:25px 0 20px;
+}
+
+.finale-card p{
+    max-width:650px;
+    margin:auto;
+    line-height:2;
+    color:#dbe7ff;
+}
+
+#celebrateBtn{
+    margin-top:45px;
+    padding:18px 42px;
+    border:none;
+    border-radius:999px;
+    cursor:pointer;
+    font-size:1rem;
+    font-weight:600;
+    color:#fff;
+    background:
+        linear-gradient(
+            135deg,
+            #ff5aa7,
+            #7b7dff
+        );
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+#celebrateBtn:hover{
+    transform:translateY(-5px);
+    box-shadow:
+        0 18px 35px rgba(255,90,167,.35);
+}
+
+/*==================================================
+            FINALE ANIMATIONS
+==================================================*/
+.finale-card{
+    opacity:0;
+    transform:
+        translateY(80px)
+        scale(.95);
+}
+
+.finale-card.show{
+    opacity:1;
+    transform:
+        translateY(0)
+        scale(1);
+    transition:
+        opacity .9s ease,
+        transform .9s ease;
+}
+
+.finale-effects{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.finale-heart,
+.finale-sparkle{
+    position:absolute;
+    opacity:0;
+}
+
+.finale-heart{
+    font-size:24px;
+    animation:finaleHeart 3s ease forwards;
+}
+
+.finale-sparkle{
+    font-size:18px;
+    animation:finaleSparkle 2.5s ease forwards;
+}
+
+@keyframes finaleHeart{
+    from{
+        opacity:0;
+        transform:
+            translateY(0)
+            scale(.5);
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    to{
+        opacity:0;
+        transform:
+            translateY(-220px)
+            scale(1.5);
+    }
+}
+
+@keyframes finaleSparkle{
+    from{
+        opacity:0;
+        transform:
+            scale(.5)
+            rotate(0deg);
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    to{
+        opacity:0;
+        transform:
+            scale(1.5)
+            rotate(360deg);
+    }
+}

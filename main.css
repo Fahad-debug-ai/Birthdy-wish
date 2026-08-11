@@ -1,0 +1,184 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:var(--bg-dark);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+button,
+input{
+    font-family:inherit;
+}
+
+button{
+    cursor:pointer;
+    border:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/*==================================================
+            GLOBAL POLISH
+==================================================*/
+
+::selection{
+
+    background:#ff6fae;
+
+    color:#ffffff;
+
+}
+
+::-moz-selection{
+
+    background:#ff6fae;
+
+    color:#ffffff;
+
+}
+
+button,
+input{
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+
+}
+
+button:focus-visible,
+input:focus-visible{
+
+    outline:none;
+
+    box-shadow:
+        0 0 0 4px rgba(255,111,174,.25);
+
+}
+
+.gift-card,
+.letter-paper,
+.timeline-card,
+.reason-card,
+.favorite-card,
+.finale-card{
+
+    border-radius:28px;
+
+}
+
+.gift-card,
+.timeline-card,
+.reason-card,
+.favorite-card,
+.finale-card{
+
+    backdrop-filter:blur(22px);
+
+    -webkit-backdrop-filter:blur(22px);
+}
+
+.reason-card,
+.favorite-card,
+.timeline-card{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+.reason-card:hover,
+.favorite-card:hover,
+.timeline-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.25);
+
+}
+
+.gallery-card img,
+.image-frame img{
+
+    transition:
+        transform .5s ease;
+
+}
+
+.gallery-card:hover img,
+.image-frame:hover img{
+
+    transform:scale(1.06);
+
+}
+
+button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0d1023;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:
+        linear-gradient(
+            #ff6fae,
+            #7c83ff
+        );
+
+    border-radius:100px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:
+        linear-gradient(
+            #ff4d9a,
+            #5b6fff
+        );
+
+}
+
+section{
+
+    transition:
+        opacity .5s ease;
+
+}

@@ -1,0 +1,14 @@
+:root{
+    --bg-dark:#081229;
+    --bg-light:#111C44;
+    --primary:#5B4BFF;
+    --secondary:#53E8FF;
+    --gold:#FFD76B;
+    --white:#ffffff;
+    --text:#EAF2FF;
+    --glass:rgba(255,255,255,.08);
+    --glass-border:rgba(255,255,255,.15);
+    --shadow:0 20px 60px rgba(0,0,0,.35);
+    --radius:28px;
+    --transition:.4s ease;
+}

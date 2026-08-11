@@ -1,0 +1,245 @@
+/*==================================================
+            FAVORITE THINGS
+==================================================*/
+#favorites{
+    position:relative;
+    padding:140px 20px;
+    overflow:hidden;
+}
+
+.favorites-bg{
+    position:absolute;
+    inset:0;
+    z-index:-1;
+}
+
+.favorites-glow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(90px);
+    opacity:.18;
+}
+
+.favorites-bg .glow-1{
+    width:320px;
+    height:320px;
+    background:#ff84c1;
+    top:-80px;
+    left:-100px;
+}
+
+.favorites-bg .glow-2{
+    width:320px;
+    height:320px;
+    background:#7b8dff;
+    right:-100px;
+    bottom:-80px;
+}
+
+.favorites-header{
+    text-align:center;
+    margin-bottom:70px;
+}
+
+.favorites-badge{
+    display:inline-block;
+    padding:10px 24px;
+    border-radius:999px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    color:#fff;
+}
+
+.favorites-header h2{
+    color:#fff;
+    font-size:3rem;
+    margin:20px 0 15px;
+}
+
+.favorites-header p{
+    max-width:700px;
+    margin:auto;
+    color:#dbe7ff;
+    line-height:1.8;
+}
+
+.favorites-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.favorite-card{
+    position:relative;
+    overflow:hidden;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(18px);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:24px;
+    padding:35px;
+    text-align:center;
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease;
+}
+
+.favorite-icon{
+    font-size:3rem;
+    margin-bottom:20px;
+    transition:
+        transform .4s ease,
+        filter .4s ease;
+}
+
+.favorite-card h3{
+    color:#fff;
+    margin-bottom:12px;
+}
+
+.favorite-card p{
+    color:#dbe7ff;
+    line-height:1.7;
+}
+
+.favorite-card:hover{
+    transform:
+        translateY(-12px);
+    border-color:
+        rgba(255,255,255,.35);
+    box-shadow:
+        0 22px 45px rgba(0,0,0,.28),
+        0 0 35px rgba(255,120,190,.20);
+}
+
+.favorite-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:60%;
+    height:100%;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.30),
+            transparent
+        );
+
+    transform:skewX(-25deg);
+    transition:left .8s ease;
+}
+
+.favorite-card:hover::before{
+    left:160%;
+}
+
+.favorite-card:hover .favorite-icon{
+    transform:
+        scale(1.25)
+        rotate(8deg);
+    filter:
+        drop-shadow(0 0 14px rgba(255,120,190,.65));
+}
+
+.favorite-card h3{
+    transition:
+        color .35s ease;
+}
+
+.favorite-card:hover h3{
+    color:#ffe2ef;
+}
+
+.favorite-card p{
+    color:#dbe7ff;
+    line-height:1.7;
+    transition:
+        color .35s ease;
+}
+
+.favorite-card:hover p{
+    color:#ffffff;
+}
+
+/*==================================================
+        FAVORITES ANIMATIONS
+==================================================*/
+.favorite-card{
+    opacity:0;
+    transform:translateY(70px);
+}
+
+.favorite-card.show{
+    opacity:1;
+    transform:translateY(0);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.favorites-effects{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.favorite-heart,
+.favorite-sparkle{
+    position:absolute;
+    opacity:0;
+}
+
+.favorite-heart{
+    font-size:22px;
+    animation:favoriteHeartFloat 2.5s ease forwards;
+}
+
+.favorite-sparkle{
+    font-size:18px;
+    animation:favoriteSparkleFloat 2s ease forwards;
+}
+
+@keyframes favoriteHeartFloat{
+    from{
+        opacity:0;
+        transform:
+        translateY(0)
+        scale(.5);
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    to{
+        opacity:0;
+        transform:
+        translateY(-180px)
+        scale(1.4);
+    }
+}
+
+@keyframes favoriteSparkleFloat{
+    from{
+        opacity:0;
+        transform:
+        scale(.4)
+        rotate(0deg);
+    }
+
+    25%{
+        opacity:1;
+    }
+
+    to{
+        opacity:0;
+        transform:
+        scale(1.3)
+        rotate(220deg);
+    }
+}

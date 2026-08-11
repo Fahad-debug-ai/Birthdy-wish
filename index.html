@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Lock</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="CSS/variables.css">
+    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="CSS/landing.css">
+    <link rel="stylesheet" href="CSS/hero.css">
+    <link rel="stylesheet" href="CSS/gallery.css">
+    <link rel="stylesheet" href="CSS/gift.css">
+    <link rel="stylesheet" href="CSS/letter.css">
+    <link rel="stylesheet" href="CSS/timeline.css">
+    <link rel="stylesheet" href="CSS/reasons.css">
+    <link rel="stylesheet" href="CSS/favorites.css">
+    <link rel="stylesheet" href="CSS/finale.css">
+    <link rel="stylesheet" href="CSS/animation.css">
+    <link rel="stylesheet" href="CSS/responsive.css">
+</head>
+
+<body>
+
+    <!-- ===============================
+            LANDING PAGE
+    ================================ -->
+    <section id="landing">
+
+        <div class="mouse-light"></div>
+
+        <!-- Background -->
+
+        <div class="background-layer"></div>
+        <div class="particles"></div>
+        <div class="aurora"></div>
+
+        <!-- Floating Effects -->
+
+        <div class="floating-hearts"></div>
+        <div class="floating-sparkles"></div>
+        <div class="floating-petals"></div>
+        <div class="floating-bubbles"></div>
+        <div class="floating-icons"></div>
+
+        <!-- Glass Card -->
+        <div class="unlock-overlay"></div>
+        <div class="landing-card">
+            <span class="badge">
+                Birthday Surprise
+            </span>
+            <div class="lock-icon-wrapper">
+
+                <div class="lock-icon">
+
+                    🔒
+
+                </div>
+
+            </div>
+            <h1>
+                Unlock
+                <span>Your Surprise</span>
+            </h1>
+            <p>
+                Enter the birthday year to unlock
+                a beautiful surprise waiting for you.
+            </p>
+            <form id="lockForm">
+                <input type="number" id="birthYear" placeholder="Enter Birth Year" autocomplete="off">
+                <button type="submit">
+                    Unlock
+                </button>
+            </form>
+        </div>
+        <div class="unlock-flash"></div>
+    </section>
+
+    <!-- HERO SECTION -->
+
+    <section id="hero" class="hidden">
+
+        <!-- Background Decorations -->
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
+        <div class="hero-particles"></div>
+        <div class="hero-container">
+
+            <!-- LEFT -->
+            <div class="hero-content">
+                <span class="hero-badge">
+                    ✨ Birthday Surprise
+                </span>
+                <h1 class="hero-title">
+                    <span id="heroHeading">
+                        Happy Birthday
+                    </span>
+                </h1>
+                <h2 id="girlName">
+                    Birthday Girl
+                </h2>
+                <p id="heroSubtitle">
+                    Every smile of yours makes the world brighter.
+                </p>
+                <button id="heroButton">
+                    Discover More
+                </button>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="hero-image-wrapper">
+                <div class="image-glow"></div>
+                <div class="image-ring"></div>
+                <div class="image-frame">
+                    <img id="heroImage" src="Assets/images/img4.jpg" alt="Birthday Girl">
+                </div>
+
+                <!-- Floating Decorations -->
+                <span class="floating-icon heart-1">❤️</span>
+                <span class="floating-icon star-1">⭐</span>
+                <span class="floating-icon sparkle-1">✨</span>
+                <span class="floating-icon heart-2">💖</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+                GALLERY SECTION
+========================================= -->
+    <section id="gallery">
+
+        <!-- Background Effects -->
+        <div class="gallery-glow gallery-glow-1"></div>
+        <div class="gallery-glow gallery-glow-2"></div>
+
+        <!-- Section Header -->
+
+        <div class="gallery-header">
+            <span class="gallery-badge">
+                📸 Beautiful Memories
+            </span>
+            <h2 id="galleryHeading">
+                Our Favorite Moments Together
+            </h2>
+            <p id="gallerySubtitle">
+                Every picture holds a memory that will always stay close to the heart.
+            </p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid">
+
+            <!-- Image 1 -->
+
+            <div class="gallery-card large">
+                <img id="galleryImage1" src="Assets/images/img3.jpg" loading="lazy" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>Memory 01 ❤️</span>
+                </div>
+            </div>
+
+            <!-- Image 2 -->
+
+            <div class="gallery-card">
+                <img id="galleryImage2" src="Assets/images/img2.jpg" loading="lazy" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>Memory 02 ✨</span>
+                </div>
+            </div>
+
+            <!-- Image 3 -->
+
+            <div class="gallery-card">
+                <img id="galleryImage3" src="Assets/images/img1.jpg" loading="lazy" alt="Gallery Image">
+                <div class="gallery-overlay">
+                    <span>Memory 03 💖</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================
+            GALLERY LIGHTBOX
+====================================== -->
+    <div id="lightbox">
+        <button id="closeLightbox">
+            ✕
+        </button>
+        <img id="lightboxImage" src="" alt="Preview">
+    </div>
+
+    <!-- =========================================
+                GIFT SECTION
+========================================= -->
+
+    <section id="gift">
+
+        <!-- Background Effects -->
+        <div class="gift-bg">
+            <span class="gift-circle gift-circle-1"></span>
+            <span class="gift-circle gift-circle-2"></span>
+            <span class="gift-circle gift-circle-3"></span>
+        </div>
+
+        <!-- Header -->
+        <div class="gift-header">
+
+            <span class="gift-badge">
+                🎁 Special Surprise
+            </span>
+
+            <h2 id="giftHeading">
+                A Beautiful Gift For You
+            </h2>
+
+            <p id="giftSubtitle">
+                Tap the gift box to reveal your surprise.
+            </p>
+        </div>
+
+        <!-- Gift Area -->
+        <div class="gift-container">
+
+            <!-- Floating Hearts -->
+            <div class="gift-effects"></div>
+
+            <!-- Gift Box -->
+            <div id="giftBox">
+
+                <!-- Lid -->
+                <div class="gift-lid">
+                    <div class="gift-bow">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <!-- Body -->
+                <div class="gift-body">
+                    <div class="gift-light"></div>
+                    <div class="gift-ribbon-vertical"></div>
+                    <div class="gift-ribbon-horizontal"></div>
+                    <div class="gift-hearts"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reveal Card -->
+
+        <div id="giftReveal" class="gift-hidden">
+            <div class="gift-card">
+                <h3 id="giftTitle">
+                    💖 Surprise!
+                </h3>
+                <p id="giftMessage">
+                    Every moment spent with you is the most beautiful gift of my life.
+                </p>
+                <button id="openLetterBtn">
+                    Open My Letter 💌
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+                LETTER SECTION
+========================================= -->
+
+    <section id="letter">
+
+        <!-- Background -->
+        <div class="letter-bg">
+            <span class="letter-circle letter-circle-1"></span>
+            <span class="letter-circle letter-circle-2"></span>
+        </div>
+
+        <!-- Header -->
+
+        <div class="letter-header">
+            <span class="letter-badge">
+                💌 A Letter For You
+            </span>
+            <h2 id="letterHeading">
+                Read My Heart
+            </h2>
+            <p id="letterSubtitle">
+                Every word is written with love and every line belongs only to you.
+            </p>
+        </div>
+
+        <!-- Envelope -->
+
+        <div class="envelope-wrapper">
+            <div id="envelope">
+                <div class="envelope-back"></div>
+                <div class="envelope-letter">
+                    <div class="letter-paper">
+                        <h3 id="letterTitle">
+                            My Dearest ❤️
+                        </h3>
+                        <p id="letterText"></p>
+                        <div class="letter-signature">
+                            <span>With Love ❤️</span>
+                            <h4 id="letterSignature">
+                                Your Name
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="envelope-front"></div>
+                <div class="envelope-flap"></div>
+            </div>
+        </div>
+        <div class="letter-effects"></div>
+    </section>
+
+    <!-- =========================================
+                TIMELINE SECTION
+========================================= -->
+
+    <section id="timeline">
+
+        <!-- Background -->
+
+        <div class="timeline-bg">
+            <span class="timeline-circle timeline-circle-1"></span>
+            <span class="timeline-circle timeline-circle-2"></span>
+        </div>
+
+        <!-- Header -->
+
+        <div class="timeline-header">
+            <span class="timeline-badge">
+                ❤️ Our Journey
+            </span>
+            <h2 id="timelineHeading">
+                Every Moment Matters
+            </h2>
+            <p id="timelineSubtitle">
+                A beautiful collection of memories that made our journey unforgettable.
+            </p>
+        </div>
+
+        <!-- Timeline -->
+
+        <div class="timeline-wrapper">
+            <div class="timeline-line"></div>
+            <!-- Timeline Item 1 -->
+
+            <div class="timeline-item left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-image">
+                        <img id="timelineImage1" src="Assets/images/img5.jpg" loading="lazy" alt="Memory">
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">
+                            💖 First Meet
+                        </span>
+                        <h3 id="timelineTitle1">
+                            The Day Everything Started
+                        </h3>
+                        <p id="timelineText1">
+                            A beautiful moment that changed everything forever.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2 -->
+
+            <div class="timeline-item right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                    <div class="timeline-image">
+                        <img id="timelineImage2" src="Assets/images/img6.jpg" loading="lazy" alt="Memory">
+                    </div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">
+                            ✨ First Memory
+                        </span>
+                        <h3 id="timelineTitle2">
+                            Our Beautiful Journey
+                        </h3>
+                        <p id="timelineText2">
+                            Every memory together became a reason to smile.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+            REASONS SECTION
+========================================= -->
+
+    <section id="reasons">
+
+        <!-- Background -->
+
+        <div class="reasons-bg">
+            <span class="reasons-glow glow-1"></span>
+            <span class="reasons-glow glow-2"></span>
+        </div>
+
+        <!-- Header -->
+
+        <div class="reasons-header">
+            <span class="reasons-badge">
+                ❤️ Reasons I Love You
+            </span>
+            <h2 id="reasonsHeading">
+                Every Little Thing Makes You Special
+            </h2>
+            <p id="reasonsSubtitle">
+                There are countless reasons why you mean so much to me.
+            </p>
+        </div>
+
+        <!-- Cards -->
+
+        <div class="reasons-grid">
+            <div class="reason-card">
+                <div class="reason-icon">😊</div>
+                <h3 id="reasonTitle1">Your Smile</h3>
+                <p id="reasonText1">
+                    Your smile brightens every moment of my life.
+                </p>
+            </div>
+
+            <div class="reason-card">
+                <div class="reason-icon">💖</div>
+                <h3 id="reasonTitle2">Your Kindness</h3>
+                <p id="reasonText2">
+                    You always make everyone feel loved and valued.
+                </p>
+            </div>
+
+            <div class="reason-card">
+                <div class="reason-icon">🌸</div>
+                <h3 id="reasonTitle3">Your Personality</h3>
+                <p id="reasonText3">
+                    Your beautiful soul makes every day unforgettable.
+                </p>
+            </div>
+        </div>
+        <div class="reasons-effects"></div>
+    </section>
+
+    <!-- =========================================
+            FAVORITE THINGS
+========================================= -->
+
+    <section id="favorites">
+
+        <div class="favorites-bg">
+            <span class="favorites-glow glow-1"></span>
+            <span class="favorites-glow glow-2"></span>
+        </div>
+
+        <div class="favorites-header">
+
+            <span class="favorites-badge">
+                🌸 Favorite Things
+            </span>
+
+            <h2 id="favoritesHeading">
+                Little Things You Love
+            </h2>
+
+            <p id="favoritesSubtitle">
+                Every little favorite thing tells a beautiful story about you.
+            </p>
+
+        </div>
+
+        <div class="favorites-grid">
+
+            <div class="favorite-card">
+                <div class="favorite-icon">🌹</div>
+                <h3 id="favoriteTitle1">Flowers</h3>
+                <p id="favoriteText1">Beautiful Roses</p>
+            </div>
+
+            <div class="favorite-card">
+                <div class="favorite-icon">🍫</div>
+                <h3 id="favoriteTitle2">Chocolate</h3>
+                <p id="favoriteText2">Sweet Moments</p>
+            </div>
+
+            <div class="favorite-card">
+                <div class="favorite-icon">🎵</div>
+                <h3 id="favoriteTitle3">Music</h3>
+                <p id="favoriteText3">Soft Romantic Songs</p>
+            </div>
+
+            <div class="favorite-card">
+                <div class="favorite-icon">☕</div>
+                <h3 id="favoriteTitle4">Coffee</h3>
+                <p id="favoriteText4">Warm Cappuccino</p>
+            </div>
+
+            <div class="favorite-card">
+                <div class="favorite-icon">🌅</div>
+                <h3 id="favoriteTitle5">Sunset</h3>
+                <p id="favoriteText5">Golden Evenings</p>
+            </div>
+
+            <div class="favorite-card">
+                <div class="favorite-icon">🎁</div>
+                <h3 id="favoriteTitle6">Surprises</h3>
+                <p id="favoriteText6">Little Gifts</p>
+            </div>
+        </div>
+        <div class="favorites-effects"></div>
+    </section>
+
+    <!-- =========================================
+                GRAND FINALE
+========================================= -->
+
+    <section id="finale">
+
+        <!-- Background -->
+        <div class="finale-bg">
+            <span class="finale-glow glow-1"></span>
+            <span class="finale-glow glow-2"></span>
+        </div>
+
+        <div class="finale-card">
+
+            <span class="finale-badge">
+                🎉 The End of a Beautiful Journey
+            </span>
+
+            <h2 id="finaleHeading">
+                Happy Birthday ❤️
+            </h2>
+
+            <p id="finaleMessage">
+                May your smile always shine brighter than the stars.
+                Thank you for being such a beautiful part of this world.
+                Wishing you endless happiness, love and unforgettable memories.
+            </p>
+
+            <button id="celebrateBtn">
+                🎊 Celebrate Again
+            </button>
+        </div>
+        <div class="finale-effects"></div>
+    </section>
+
+    <!-- JavaScript -->
+
+    <script src="JS/landing.js"></script>
+    <script src="JS/gift.js"></script>
+    <script src="JS/letter.js"></script>
+    <script src="JS/timeline.js"></script>
+    <script src="JS/reasons.js"></script>
+    <script src="JS/favorites.js"></script>
+    <script src="JS/finale.js"></script>
+    <script src="JS/config.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
