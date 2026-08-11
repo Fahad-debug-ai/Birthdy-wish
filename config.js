@@ -8,7 +8,7 @@ window.CONFIG = {
     "heroHeading": "Happy Birthday",
     "heroSubtitle": "Every smile of yours makes the world brighter. Today is all about celebrating you and the happiness you bring into every life around you.",
     "heroButton": "Explore Memories",
-    "heroImage": "assets/images/img4.jpg",
+    "heroImage": "img4.jpg",
 
 
 
@@ -16,9 +16,9 @@ window.CONFIG = {
     "gallerySubtitle":"Every picture holds a memory that will always stay close to the heart.",
     "galleryImages":[
 
-    "assets/images/img1.jpg",
-    "assets/images/img2.jpg",
-    "assets/images/img3.jpg"
+    "img1.jpg",
+    "img2.jpg",
+    "img3.jpg"
 
 ]
 
@@ -39,13 +39,13 @@ window.CONFIG = {
         "date": "💖 First Meet",
         "title": "The Day Everything Started",
         "text": "A beautiful moment that changed everything forever.",
-        "image": "Assets/images/img5.jpg"
+        "image": "img5.jpg"
     },
     {
         "date": "✨ First Memory",
         "title": "Our Beautiful Journey",
         "text": "Every memory together became another reason to smile.",
-        "image": "Assets/images/img6.jpg"
+        "image": "img6.jpg"
     }
 ]
 
