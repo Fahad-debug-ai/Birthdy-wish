@@ -1,28 +1,36 @@
 /* =========================================================
    BIRTHDAY LOCK
-   MOBILE RESPONSIVE FIX
+   FINAL RESPONSIVE CSS
    Landing + Hero + Timeline
 ========================================================= */
 
 
 /* =========================================================
-   GLOBAL MOBILE SAFETY
+   GLOBAL
 ========================================================= */
 
-html,
-body {
+html {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
 }
 
-* {
+body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
 img {
+    display: block;
     max-width: 100%;
-    height: auto;
 }
 
 
@@ -32,55 +40,83 @@ img {
 
 @media (max-width: 900px) {
 
-    /* ---------- Landing ---------- */
+    /* =====================================================
+       LANDING
+    ===================================================== */
 
     #landing {
-        padding: 30px 18px;
+        min-height: 100svh;
+        padding: 30px 20px;
     }
 
     .landing-card {
-        width: min(92vw, 500px);
-        padding: 45px 32px;
+        width: min(100%, 520px);
+        padding: 48px 32px;
     }
 
 
-    /* ---------- Hero ---------- */
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     #hero {
-        padding: 60px 18px;
+        min-height: 100svh;
+        padding: 50px 20px;
     }
 
     .hero-container {
-        width: min(94vw, 760px);
-        padding: 55px 30px;
+        width: min(100%, 760px);
+
+        display: flex;
+        flex-direction: column;
+
         gap: 45px;
+
+        padding: 55px 30px;
     }
 
-    .hero-title {
-        font-size: 3.2rem;
+    .hero-content {
+        width: 100%;
+        align-items: center;
+        text-align: center;
     }
 
-    #girlName {
-        font-size: 2.4rem;
+    .hero-image-wrapper {
+        width: 100%;
+        min-height: 430px;
     }
 
-    #heroSubtitle {
-        max-width: 100%;
+    .image-frame {
+        width: 360px;
+        height: 360px;
+    }
+
+    .image-ring {
+        width: 405px;
+        height: 405px;
+    }
+
+    .image-glow {
+        width: 380px;
+        height: 380px;
     }
 
 
-    /* ---------- Timeline ---------- */
+    /* =====================================================
+       TIMELINE
+    ===================================================== */
 
-    .story-content {
-        width: min(92vw, 760px);
+    #timeline {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    .story-title {
-        font-size: 2.8rem;
+    .timeline-wrapper {
+        width: min(100%, 760px);
     }
 
-    .story-intro {
-        max-width: 650px;
+    .timeline-card {
+        width: 100%;
     }
 
 }
@@ -93,16 +129,20 @@ img {
 @media (max-width: 600px) {
 
     /* =====================================================
-       GLOBAL
+       GLOBAL MOBILE
     ===================================================== */
 
+    html,
     body {
+        width: 100%;
+        max-width: 100%;
         overflow-x: hidden;
     }
 
     section {
+        width: 100%;
         max-width: 100%;
-        overflow-x: hidden;
+        overflow: hidden;
     }
 
 
@@ -115,81 +155,91 @@ img {
         min-height: 100svh;
         min-height: 100vh;
 
-        padding: 20px 16px;
+        padding: 20px 14px;
 
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
     }
 
 
-    /* Background effects */
+    /* Background */
 
     .aurora {
         width: 420px;
         height: 420px;
 
-        top: -150px;
-        right: -180px;
+        top: -180px;
+        right: -190px;
 
-        filter: blur(65px);
+        filter: blur(70px);
     }
 
 
-    /* Glass Card */
+    /* Card */
 
     .landing-card {
-        width: 100%;
-        max-width: 430px;
+        position: relative;
 
-        padding: 36px 22px;
+        width: 100%;
+        max-width: 400px;
+
+        padding: 34px 20px;
 
         border-radius: 24px;
+
+        margin: 0 auto;
     }
 
 
     /* Badge */
 
     .badge {
+        max-width: 100%;
+
         padding: 7px 14px;
 
-        font-size: 0.72rem;
-
         margin-bottom: 20px;
+
+        font-size: .72rem;
+
+        line-height: 1.4;
     }
 
 
-    /* Landing Heading */
+    /* Heading */
 
     .landing-card h1 {
+        width: 100%;
+
         margin: 0;
 
-        font-size: clamp(
-            2rem,
-            9vw,
-            2.7rem
-        );
+        font-size: clamp(2rem, 9vw, 2.6rem);
 
         line-height: 1.08;
 
-        word-break: normal;
-        overflow-wrap: normal;
+        text-align: center;
     }
 
-
     .landing-card h1 span {
+        display: block;
+
         margin-top: 5px;
     }
 
 
-    /* Landing paragraph */
+    /* Paragraph */
 
     .landing-card p {
-        margin: 18px 0 28px;
+        width: 100%;
 
-        font-size: 0.88rem;
+        margin: 18px auto 26px;
+
+        font-size: .84rem;
 
         line-height: 1.7;
+
+        text-align: center;
     }
 
 
@@ -198,7 +248,10 @@ img {
     #lockForm {
         width: 100%;
 
-        gap: 14px;
+        display: flex;
+        flex-direction: column;
+
+        gap: 13px;
     }
 
 
@@ -207,35 +260,28 @@ img {
         width: 100%;
 
         height: 54px;
-
         min-height: 54px;
 
+        margin: 0;
+
         border-radius: 16px;
-    }
 
-
-    #birthYear {
-        font-size: 0.95rem;
-    }
-
-
-    #lockForm button {
-        font-size: 0.95rem;
+        font-size: .9rem;
     }
 
 
     /* =====================================================
-       HERO SECTION
+       HERO
     ===================================================== */
 
     #hero {
         width: 100%;
         min-height: 100svh;
-        min-height: 100vh;
 
-        padding: 40px 16px;
+        padding: 35px 14px;
 
         display: flex;
+
         align-items: center;
         justify-content: center;
 
@@ -243,52 +289,62 @@ img {
     }
 
 
-    /* Glow */
+    /* Background glow */
 
     .hero-glow-1 {
         width: 260px;
         height: 260px;
 
-        top: -90px;
-        left: -110px;
+        top: -110px;
+        left: -120px;
 
-        filter: blur(65px);
+        filter: blur(70px);
     }
-
 
     .hero-glow-2 {
-        width: 240px;
-        height: 240px;
+        width: 250px;
+        height: 250px;
 
-        bottom: -80px;
-        right: -100px;
+        right: -120px;
+        bottom: -110px;
 
-        filter: blur(65px);
+        filter: blur(70px);
     }
 
 
-    /* Main hero container */
+    /* Main hero card */
 
     .hero-container {
+        position: relative;
+
         width: 100%;
         max-width: 430px;
 
-        padding: 38px 22px;
+        min-width: 0;
 
-        border-radius: 24px;
+        margin: 0 auto;
+
+        padding: 34px 20px 38px;
 
         display: flex;
         flex-direction: column;
 
-        gap: 0;
+        align-items: center;
+
+        gap: 32px;
+
+        border-radius: 24px;
     }
 
 
-    /* Hero content */
+    /* Content */
 
     .hero-content {
         width: 100%;
         min-width: 0;
+
+        display: flex;
+        flex-direction: column;
 
         align-items: center;
 
@@ -299,54 +355,48 @@ img {
     /* Badge */
 
     .hero-badge {
+        width: auto;
         max-width: 100%;
 
-        padding: 8px 15px;
+        padding: 7px 13px;
 
-        margin-bottom: 20px;
+        margin-bottom: 18px;
 
-        font-size: 0.72rem;
+        font-size: .7rem;
 
-        white-space: normal;
+        line-height: 1.4;
 
         text-align: center;
+
+        white-space: normal;
     }
 
 
-    /* Hero title */
+    /* Heading */
 
     .hero-title {
         width: 100%;
 
         margin: 0;
 
-        font-size: clamp(
-            2.15rem,
-            10vw,
-            2.8rem
-        );
+        font-size: clamp(2rem, 9.5vw, 2.65rem);
 
         line-height: 1.08;
 
         text-align: center;
 
         overflow-wrap: normal;
-        word-break: normal;
     }
 
 
-    /* Girl name */
+    /* Name */
 
     #girlName {
         width: 100%;
 
-        margin-top: 12px;
+        margin: 10px 0 0;
 
-        font-size: clamp(
-            1.8rem,
-            8vw,
-            2.35rem
-        );
+        font-size: clamp(1.75rem, 8vw, 2.3rem);
 
         line-height: 1.15;
 
@@ -360,247 +410,351 @@ img {
 
     #heroSubtitle {
         width: 100%;
-        max-width: 100%;
+        max-width: 340px;
 
-        margin-top: 20px;
+        margin: 17px auto 0;
 
-        font-size: 0.9rem;
+        font-size: .84rem;
 
-        line-height: 1.75;
+        line-height: 1.7;
 
         text-align: center;
+
+        overflow-wrap: anywhere;
     }
 
 
-    /* Hero button */
+    /* Button */
 
     #heroButton {
-        width: 100%;
-        max-width: 250px;
+        width: min(100%, 230px);
 
-        height: 54px;
+        height: 52px;
 
-        margin-top: 28px;
+        margin: 24px auto 0;
 
         border-radius: 16px;
 
-        font-size: 0.9rem;
+        font-size: .88rem;
     }
 
 
-    /* Hero image / visual */
+    /* =====================================================
+       HERO IMAGE
+    ===================================================== */
 
-    .hero-image,
-    .hero-photo,
     .hero-image-wrapper {
-        width: 100%;
-        max-width: 100%;
+        position: relative;
 
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
+        max-width: 340px;
+
+        height: 340px;
+        min-height: 340px;
+
+        margin: 0 auto;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
     }
 
 
-    .hero-image img,
-    .hero-photo img,
-    .hero-image-wrapper img {
-        width: 100%;
-        max-width: 100%;
+    /* Actual image frame */
 
-        height: auto;
+    .image-frame {
+        position: relative;
+
+        width: min(78vw, 285px);
+        height: min(78vw, 285px);
+
+        max-width: 285px;
+        max-height: 285px;
+
+        border-width: 6px;
+    }
+
+
+    .image-frame img {
+        width: 100%;
+        height: 100%;
 
         object-fit: cover;
     }
 
 
-    /* =====================================================
-       STORY / TIMELINE
-    ===================================================== */
+    /* Ring */
 
-    #story,
-    .story-section,
-    .timeline-section {
-        width: 100%;
-        max-width: 100%;
+    .image-ring {
+        width: min(88vw, 315px);
+        height: min(88vw, 315px);
 
-        overflow-x: hidden;
+        max-width: 315px;
+        max-height: 315px;
     }
 
 
-    .story-content {
+    /* Glow */
+
+    .image-glow {
+        width: min(90vw, 320px);
+        height: min(90vw, 320px);
+
+        max-width: 320px;
+        max-height: 320px;
+
+        filter: blur(45px);
+    }
+
+
+    /* Floating icons */
+
+    .floating-icon {
+        font-size: 1.35rem;
+    }
+
+    .heart-1 {
+        top: 28px;
+        left: 20px;
+    }
+
+    .star-1 {
+        top: 55px;
+        right: 12px;
+    }
+
+    .sparkle-1 {
+        bottom: 45px;
+        left: 18px;
+    }
+
+    .heart-2 {
+        right: 22px;
+        bottom: 28px;
+    }
+
+
+    /* =====================================================
+       TIMELINE
+    ===================================================== */
+
+    #timeline {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 70px 16px;
+
+        overflow: hidden;
+    }
+
+
+    /* Header */
+
+    .timeline-header {
         width: 100%;
         max-width: 430px;
 
-        padding-left: 20px;
-        padding-right: 20px;
-
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    /* Story heading */
-
-    .story-title {
-        width: 100%;
-
-        font-size: clamp(
-            2rem,
-            9vw,
-            2.5rem
-        );
-
-        line-height: 1.1;
-
-        overflow-wrap: normal;
-        word-break: normal;
-
-        text-align: center;
-    }
-
-
-    .story-intro {
-        width: 100%;
-        max-width: 100%;
-
-        font-size: 0.88rem;
-
-        line-height: 1.75;
-
-        text-align: center;
-    }
-
-
-    /* Timeline */
-
-    .story-timeline {
-        position: relative;
-
-        width: 100%;
-
-        display: flex;
-        flex-direction: column;
-
-        gap: 24px;
-
-        padding: 10px 0 10px 42px;
-    }
-
-
-    /* Vertical timeline line */
-
-    .story-timeline__line {
-        position: absolute;
-
-        top: 0;
-        bottom: 0;
-
-        left: 15px;
-
-        width: 1px;
-
-        height: auto;
-
-        transform: none;
-
-        display: flex;
-        flex-direction: column;
-
-        justify-content: space-around;
-
-        pointer-events: none;
-    }
-
-
-    /* Timeline dots */
-
-    .story-timeline__dot {
-        position: relative;
-
-        width: 10px;
-        height: 10px;
-
-        min-width: 10px;
-        min-height: 10px;
-
-        margin-left: -4px;
-
-        border-radius: 50%;
-    }
-
-
-    /* Timeline items */
-
-    .story-item,
-    .story-item--left,
-    .story-item--right {
-        width: 100%;
-
-        margin: 0;
+        margin: 0 auto 45px;
 
         padding: 0;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        text-align: left;
-
-        grid-column: auto;
-
-        transform: none;
+        
+        text-align: center;
     }
 
 
-    /* Number */
-
-    .story-item__number {
-        position: absolute;
-
-        left: -34px;
-
-        width: 28px;
-        height: 28px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        border-radius: 50%;
-
-        font-size: 0.68rem;
-
-        z-index: 3;
-    }
-
-
-    /* Story card */
-
-    .story-item__content {
-        width: 100%;
+    .timeline-badge {
         max-width: 100%;
 
-        padding: 20px 18px;
+        padding: 7px 14px;
 
-        border-radius: 18px;
-
-        text-align: left;
-    }
-
-
-    .story-item__date {
-        display: block;
-
-        font-size: 0.68rem;
+        font-size: .7rem;
 
         line-height: 1.4;
     }
 
 
-    .story-item__title {
-        margin-top: 7px;
+    #timelineHeading {
+        width: 100%;
+
+        margin: 16px 0 0;
+
+        font-size: clamp(2rem, 9vw, 2.55rem);
+
+        line-height: 1.1;
+
+        text-align: center;
+
+        overflow-wrap: normal;
+    }
+
+
+    #timelineSubtitle {
+        width: 100%;
+        max-width: 370px;
+
+        margin: 15px auto 0;
+
+        font-size: .84rem;
+
+        line-height: 1.7;
+
+        text-align: center;
+    }
+
+
+    /* Timeline wrapper */
+
+    .timeline-wrapper {
+        position: relative;
+
+        width: 100%;
+        max-width: 430px;
+
+        margin: 0 auto;
+
+        padding: 0 0 0 34px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 28px;
+    }
+
+
+    /* Vertical line */
+
+    .timeline-line {
+        position: absolute;
+
+        top: 0;
+        bottom: 0;
+
+        left: 12px;
+
+        width: 2px;
+
+        height: auto;
+
+        transform: none;
+
+        margin: 0;
+
+        display: block;
+    }
+
+
+    /* Timeline items */
+
+    .timeline-item,
+    .timeline-item.left,
+    .timeline-item.right {
+        position: relative;
+
+        width: 100%;
+
+        min-width: 0;
+
+        margin: 0;
+
+        padding: 0;
+
+        display: block;
+
+        transform: none;
+
+        left: auto;
+        right: auto;
+    }
+
+
+    /* Dot */
+
+    .timeline-dot {
+        position: absolute;
+
+        top: 24px;
+        left: -28px;
+
+        width: 12px;
+        height: 12px;
+
+        margin: 0;
+
+        border-radius: 50%;
+
+        transform: none;
+
+        z-index: 5;
+    }
+
+
+    /* Timeline card */
+
+    .timeline-card {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        overflow: hidden;
+
+        border-radius: 20px;
+
+        transform: none;
+    }
+
+
+    /* Timeline image */
+
+    .timeline-image {
+        width: 100%;
+        height: 190px;
+
+        min-height: 190px;
+
+        overflow: hidden;
+    }
+
+
+    .timeline-image img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+    }
+
+
+    /* Timeline content */
+
+    .timeline-content {
+        width: 100%;
+
+        padding: 20px 18px 22px;
+
+        text-align: left;
+    }
+
+
+    .timeline-date {
+        display: inline-block;
+
+        font-size: .7rem;
+
+        line-height: 1.4;
+    }
+
+
+    .timeline-content h3 {
+        width: 100%;
+
+        margin: 8px 0 0;
 
         font-size: 1.15rem;
 
@@ -610,32 +764,16 @@ img {
     }
 
 
-    .story-item__text {
-        margin-top: 10px;
+    .timeline-content p {
+        width: 100%;
 
-        font-size: 0.8rem;
+        margin: 10px 0 0;
+
+        font-size: .8rem;
 
         line-height: 1.7;
 
         overflow-wrap: anywhere;
-    }
-
-
-    /* Continue button */
-
-    .story-continue {
-        width: 100%;
-        max-width: 250px;
-
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-
-    /* Side labels */
-
-    .story-side {
-        display: none;
     }
 
 }
@@ -647,84 +785,147 @@ img {
 
 @media (max-width: 380px) {
 
-    /* Landing */
+    /* ---------- Landing ---------- */
 
     #landing {
-        padding: 16px 12px;
+        padding: 16px 10px;
     }
 
     .landing-card {
-        padding: 30px 18px;
+        max-width: 360px;
+
+        padding: 30px 17px;
+
         border-radius: 20px;
     }
 
     .landing-card h1 {
-        font-size: 1.9rem;
+        font-size: 1.85rem;
     }
 
     .landing-card p {
-        font-size: 0.82rem;
+        font-size: .8rem;
+
+        margin-top: 16px;
+        margin-bottom: 23px;
     }
 
 
-    /* Hero */
+    /* ---------- Hero ---------- */
 
     #hero {
-        padding: 30px 12px;
+        padding: 25px 10px;
     }
 
     .hero-container {
-        padding: 32px 17px;
+        max-width: 360px;
+
+        padding: 30px 16px 34px;
+
+        gap: 25px;
+
         border-radius: 20px;
     }
 
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.9rem;
     }
 
     #girlName {
-        font-size: 1.7rem;
+        font-size: 1.65rem;
     }
 
     #heroSubtitle {
-        font-size: 0.82rem;
+        max-width: 300px;
+
+        font-size: .79rem;
+    }
+
+    #heroButton {
+        width: 100%;
+        max-width: 210px;
+
+        height: 50px;
     }
 
 
-    /* Timeline */
+    /* ---------- Hero image ---------- */
 
-    .story-content {
-        padding-left: 16px;
-        padding-right: 16px;
+    .hero-image-wrapper {
+        max-width: 285px;
+
+        height: 285px;
+        min-height: 285px;
     }
 
-    .story-timeline {
-        padding-left: 36px;
+    .image-frame {
+        width: 230px;
+        height: 230px;
     }
 
-    .story-timeline__line {
-        left: 12px;
+    .image-ring {
+        width: 255px;
+        height: 255px;
     }
 
-    .story-item__number {
-        left: -30px;
-
-        width: 25px;
-        height: 25px;
-
-        font-size: 0.62rem;
+    .image-glow {
+        width: 270px;
+        height: 270px;
     }
 
-    .story-item__content {
-        padding: 17px 15px;
+
+    /* ---------- Timeline ---------- */
+
+    #timeline {
+        padding: 60px 12px;
     }
 
-    .story-item__title {
-        font-size: 1.05rem;
+    .timeline-header {
+        max-width: 340px;
+
+        margin-bottom: 38px;
     }
 
-    .story-item__text {
-        font-size: 0.76rem;
+    #timelineHeading {
+        font-size: 1.9rem;
+    }
+
+    #timelineSubtitle {
+        font-size: .79rem;
+    }
+
+    .timeline-wrapper {
+        max-width: 350px;
+
+        padding-left: 30px;
+    }
+
+    .timeline-line {
+        left: 10px;
+    }
+
+    .timeline-dot {
+        left: -25px;
+
+        width: 11px;
+        height: 11px;
+    }
+
+    .timeline-image {
+        height: 165px;
+        min-height: 165px;
+    }
+
+    .timeline-content {
+        padding: 17px 15px 19px;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.02rem;
+    }
+
+    .timeline-content p {
+        font-size: .75rem;
     }
 
 }
