@@ -1859,3 +1859,376 @@ img {
     }
 
 }
+
+/* =========================================================
+   FINAL MOBILE FIX
+   GALLERY + REASONS + FAVORITE THINGS
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* =====================================================
+       GALLERY
+    ===================================================== */
+
+    #gallery {
+        width: 100%;
+        max-width: 100%;
+        padding: 70px 14px;
+        overflow: hidden;
+    }
+
+    .gallery-header {
+        width: 100%;
+        max-width: 390px;
+        margin: 0 auto 32px;
+        text-align: center;
+    }
+
+    .gallery-badge {
+        display: inline-block;
+        max-width: 100%;
+        font-size: 0.68rem;
+        line-height: 1.4;
+        white-space: normal;
+    }
+
+    #galleryHeading {
+        width: 100%;
+        margin: 15px auto 0;
+
+        font-size: clamp(1.8rem, 8vw, 2.35rem);
+        line-height: 1.12;
+
+        text-align: center;
+        overflow-wrap: normal;
+    }
+
+    #gallerySubtitle {
+        width: 100%;
+        max-width: 360px;
+
+        margin: 13px auto 0;
+
+        font-size: 0.8rem;
+        line-height: 1.7;
+
+        text-align: center;
+    }
+
+    .gallery-grid {
+        width: 100%;
+        max-width: 390px;
+
+        margin: 30px auto 0;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .gallery-card,
+    .gallery-card.large {
+        width: 100%;
+        height: 235px;
+        min-height: 235px;
+
+        flex: none;
+
+        overflow: hidden;
+        border-radius: 20px;
+    }
+
+    .gallery-card.large {
+        height: 270px;
+        min-height: 270px;
+    }
+
+    .gallery-card img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+    }
+
+    .gallery-overlay {
+        opacity: 1;
+    }
+
+
+    /* =====================================================
+       REASONS
+    ===================================================== */
+
+    #reasons {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 70px 14px;
+
+        overflow: hidden;
+    }
+
+    .reasons-header {
+        width: 100%;
+        max-width: 390px;
+
+        margin: 0 auto 35px;
+
+        text-align: center;
+    }
+
+    .reasons-badge {
+        display: inline-block;
+
+        max-width: 100%;
+
+        font-size: 0.68rem;
+        line-height: 1.4;
+    }
+
+    #reasonsHeading {
+        width: 100%;
+
+        margin: 15px auto 0;
+
+        font-size: clamp(1.75rem, 7.8vw, 2.3rem);
+        line-height: 1.12;
+
+        text-align: center;
+        overflow-wrap: normal;
+    }
+
+    #reasonsSubtitle {
+        width: 100%;
+        max-width: 360px;
+
+        margin: 13px auto 0;
+
+        font-size: 0.8rem;
+        line-height: 1.7;
+
+        text-align: center;
+    }
+
+    .reasons-grid {
+        width: 100%;
+        max-width: 390px;
+
+        margin: 0 auto;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 14px;
+    }
+
+    .reason-card {
+        width: 100%;
+        min-width: 0;
+
+        padding: 24px 18px;
+
+        border-radius: 20px;
+
+        text-align: center;
+    }
+
+    .reason-icon {
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    .reason-card h3 {
+        margin: 12px 0 0;
+
+        font-size: 1.05rem;
+        line-height: 1.3;
+    }
+
+    .reason-card p {
+        width: 100%;
+
+        margin: 8px 0 0;
+
+        font-size: 0.78rem;
+        line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       FAVORITE THINGS
+    ===================================================== */
+
+    #favorites {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 70px 14px;
+
+        overflow: hidden;
+    }
+
+    .favorites-header {
+        width: 100%;
+        max-width: 390px;
+
+        margin: 0 auto 35px;
+
+        text-align: center;
+    }
+
+    .favorites-badge {
+        display: inline-block;
+
+        max-width: 100%;
+
+        font-size: 0.68rem;
+        line-height: 1.4;
+    }
+
+    #favoritesHeading {
+        width: 100%;
+
+        margin: 15px auto 0;
+
+        font-size: clamp(1.8rem, 8vw, 2.35rem);
+        line-height: 1.12;
+
+        text-align: center;
+        overflow-wrap: normal;
+    }
+
+    #favoritesSubtitle {
+        width: 100%;
+        max-width: 360px;
+
+        margin: 13px auto 0;
+
+        font-size: 0.8rem;
+        line-height: 1.7;
+
+        text-align: center;
+    }
+
+    .favorites-grid {
+        width: 100%;
+        max-width: 390px;
+
+        margin: 0 auto;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+    }
+
+    .favorite-card {
+        width: 100%;
+        min-width: 0;
+
+        padding: 22px 10px;
+
+        border-radius: 18px;
+
+        text-align: center;
+
+        overflow: hidden;
+    }
+
+    .favorite-icon {
+        font-size: 1.75rem;
+        line-height: 1;
+    }
+
+    .favorite-card h3 {
+        width: 100%;
+
+        margin: 10px 0 0;
+
+        font-size: 0.9rem;
+        line-height: 1.3;
+
+        overflow-wrap: anywhere;
+    }
+
+    .favorite-card p {
+        width: 100%;
+
+        margin: 6px 0 0;
+
+        font-size: 0.68rem;
+        line-height: 1.5;
+
+        overflow-wrap: anywhere;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    #gallery,
+    #reasons,
+    #favorites {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    /* Gallery */
+
+    .gallery-grid {
+        max-width: 350px;
+        gap: 12px;
+    }
+
+    .gallery-card,
+    .gallery-card.large {
+        height: 220px;
+        min-height: 220px;
+    }
+
+    .gallery-card.large {
+        height: 250px;
+        min-height: 250px;
+    }
+
+
+    /* Reasons */
+
+    .reasons-grid {
+        max-width: 350px;
+    }
+
+    .reason-card {
+        padding: 21px 15px;
+    }
+
+
+    /* Favorites */
+
+    .favorites-grid {
+        max-width: 350px;
+        gap: 9px;
+    }
+
+    .favorite-card {
+        padding: 19px 7px;
+    }
+
+    .favorite-card h3 {
+        font-size: 0.84rem;
+    }
+
+    .favorite-card p {
+        font-size: 0.63rem;
+    }
+}
