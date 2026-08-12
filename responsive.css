@@ -1,190 +1,730 @@
-/*==================================================
-                TABLET
-==================================================*/
+/* =========================================================
+   BIRTHDAY LOCK
+   MOBILE RESPONSIVE FIX
+   Landing + Hero + Timeline
+========================================================= */
 
-@media (max-width:1024px){
 
-    .hero-container{
+/* =========================================================
+   GLOBAL MOBILE SAFETY
+========================================================= */
 
-        grid-template-columns:1fr;
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
-        gap:60px;
+* {
+    box-sizing: border-box;
+}
 
-        text-align:center;
+img {
+    max-width: 100%;
+    height: auto;
+}
 
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* ---------- Landing ---------- */
+
+    #landing {
+        padding: 30px 18px;
     }
 
-    .gallery-grid,
-    .reasons-grid,
-    .favorites-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
+    .landing-card {
+        width: min(92vw, 500px);
+        padding: 45px 32px;
     }
 
-    .timeline-item{
 
-        width:100%;
+    /* ---------- Hero ---------- */
 
+    #hero {
+        padding: 60px 18px;
     }
 
-    .finale-card{
+    .hero-container {
+        width: min(94vw, 760px);
+        padding: 55px 30px;
+        gap: 45px;
+    }
 
-        padding:50px 35px;
+    .hero-title {
+        font-size: 3.2rem;
+    }
 
+    #girlName {
+        font-size: 2.4rem;
+    }
+
+    #heroSubtitle {
+        max-width: 100%;
+    }
+
+
+    /* ---------- Timeline ---------- */
+
+    .story-content {
+        width: min(92vw, 760px);
+    }
+
+    .story-title {
+        font-size: 2.8rem;
+    }
+
+    .story-intro {
+        max-width: 650px;
     }
 
 }
 
-/*==================================================
-                MOBILE
-==================================================*/
 
-@media (max-width:768px){
+/* =========================================================
+   MOBILE
+========================================================= */
 
-    section{
+@media (max-width: 600px) {
 
-        padding:90px 20px;
+    /* =====================================================
+       GLOBAL
+    ===================================================== */
 
+    body {
+        overflow-x: hidden;
     }
 
-    .hero-title{
-
-        font-size:2.6rem;
-
+    section {
+        max-width: 100%;
+        overflow-x: hidden;
     }
 
-    #girlName{
 
-        font-size:2rem;
+    /* =====================================================
+       LANDING PAGE
+    ===================================================== */
 
+    #landing {
+        width: 100%;
+        min-height: 100svh;
+        min-height: 100vh;
+
+        padding: 20px 16px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .gallery-grid,
-    .reasons-grid,
-    .favorites-grid{
 
-        grid-template-columns:1fr;
+    /* Background effects */
 
+    .aurora {
+        width: 420px;
+        height: 420px;
+
+        top: -150px;
+        right: -180px;
+
+        filter: blur(65px);
     }
 
-    #giftBox{
 
-        transform:scale(.85);
+    /* Glass Card */
 
+    .landing-card {
+        width: 100%;
+        max-width: 430px;
+
+        padding: 36px 22px;
+
+        border-radius: 24px;
     }
 
-    #envelope{
 
-        transform:scale(.90);
+    /* Badge */
 
+    .badge {
+        padding: 7px 14px;
+
+        font-size: 0.72rem;
+
+        margin-bottom: 20px;
     }
 
-    .timeline-card{
 
-        width:100%;
+    /* Landing Heading */
 
+    .landing-card h1 {
+        margin: 0;
+
+        font-size: clamp(
+            2rem,
+            9vw,
+            2.7rem
+        );
+
+        line-height: 1.08;
+
+        word-break: normal;
+        overflow-wrap: normal;
     }
 
-    .finale-card{
 
-        padding:40px 25px;
+    .landing-card h1 span {
+        margin-top: 5px;
+    }
 
+
+    /* Landing paragraph */
+
+    .landing-card p {
+        margin: 18px 0 28px;
+
+        font-size: 0.88rem;
+
+        line-height: 1.7;
+    }
+
+
+    /* Form */
+
+    #lockForm {
+        width: 100%;
+
+        gap: 14px;
+    }
+
+
+    #birthYear,
+    #lockForm button {
+        width: 100%;
+
+        height: 54px;
+
+        min-height: 54px;
+
+        border-radius: 16px;
+    }
+
+
+    #birthYear {
+        font-size: 0.95rem;
+    }
+
+
+    #lockForm button {
+        font-size: 0.95rem;
+    }
+
+
+    /* =====================================================
+       HERO SECTION
+    ===================================================== */
+
+    #hero {
+        width: 100%;
+        min-height: 100svh;
+        min-height: 100vh;
+
+        padding: 40px 16px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+    }
+
+
+    /* Glow */
+
+    .hero-glow-1 {
+        width: 260px;
+        height: 260px;
+
+        top: -90px;
+        left: -110px;
+
+        filter: blur(65px);
+    }
+
+
+    .hero-glow-2 {
+        width: 240px;
+        height: 240px;
+
+        bottom: -80px;
+        right: -100px;
+
+        filter: blur(65px);
+    }
+
+
+    /* Main hero container */
+
+    .hero-container {
+        width: 100%;
+        max-width: 430px;
+
+        padding: 38px 22px;
+
+        border-radius: 24px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+
+    /* Hero content */
+
+    .hero-content {
+        width: 100%;
+        min-width: 0;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    /* Badge */
+
+    .hero-badge {
+        max-width: 100%;
+
+        padding: 8px 15px;
+
+        margin-bottom: 20px;
+
+        font-size: 0.72rem;
+
+        white-space: normal;
+
+        text-align: center;
+    }
+
+
+    /* Hero title */
+
+    .hero-title {
+        width: 100%;
+
+        margin: 0;
+
+        font-size: clamp(
+            2.15rem,
+            10vw,
+            2.8rem
+        );
+
+        line-height: 1.08;
+
+        text-align: center;
+
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+
+    /* Girl name */
+
+    #girlName {
+        width: 100%;
+
+        margin-top: 12px;
+
+        font-size: clamp(
+            1.8rem,
+            8vw,
+            2.35rem
+        );
+
+        line-height: 1.15;
+
+        text-align: center;
+
+        overflow-wrap: anywhere;
+    }
+
+
+    /* Subtitle */
+
+    #heroSubtitle {
+        width: 100%;
+        max-width: 100%;
+
+        margin-top: 20px;
+
+        font-size: 0.9rem;
+
+        line-height: 1.75;
+
+        text-align: center;
+    }
+
+
+    /* Hero button */
+
+    #heroButton {
+        width: 100%;
+        max-width: 250px;
+
+        height: 54px;
+
+        margin-top: 28px;
+
+        border-radius: 16px;
+
+        font-size: 0.9rem;
+    }
+
+
+    /* Hero image / visual */
+
+    .hero-image,
+    .hero-photo,
+    .hero-image-wrapper {
+        width: 100%;
+        max-width: 100%;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .hero-image img,
+    .hero-photo img,
+    .hero-image-wrapper img {
+        width: 100%;
+        max-width: 100%;
+
+        height: auto;
+
+        object-fit: cover;
+    }
+
+
+    /* =====================================================
+       STORY / TIMELINE
+    ===================================================== */
+
+    #story,
+    .story-section,
+    .timeline-section {
+        width: 100%;
+        max-width: 100%;
+
+        overflow-x: hidden;
+    }
+
+
+    .story-content {
+        width: 100%;
+        max-width: 430px;
+
+        padding-left: 20px;
+        padding-right: 20px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* Story heading */
+
+    .story-title {
+        width: 100%;
+
+        font-size: clamp(
+            2rem,
+            9vw,
+            2.5rem
+        );
+
+        line-height: 1.1;
+
+        overflow-wrap: normal;
+        word-break: normal;
+
+        text-align: center;
+    }
+
+
+    .story-intro {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: 0.88rem;
+
+        line-height: 1.75;
+
+        text-align: center;
+    }
+
+
+    /* Timeline */
+
+    .story-timeline {
+        position: relative;
+
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 24px;
+
+        padding: 10px 0 10px 42px;
+    }
+
+
+    /* Vertical timeline line */
+
+    .story-timeline__line {
+        position: absolute;
+
+        top: 0;
+        bottom: 0;
+
+        left: 15px;
+
+        width: 1px;
+
+        height: auto;
+
+        transform: none;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-around;
+
+        pointer-events: none;
+    }
+
+
+    /* Timeline dots */
+
+    .story-timeline__dot {
+        position: relative;
+
+        width: 10px;
+        height: 10px;
+
+        min-width: 10px;
+        min-height: 10px;
+
+        margin-left: -4px;
+
+        border-radius: 50%;
+    }
+
+
+    /* Timeline items */
+
+    .story-item,
+    .story-item--left,
+    .story-item--right {
+        width: 100%;
+
+        margin: 0;
+
+        padding: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        text-align: left;
+
+        grid-column: auto;
+
+        transform: none;
+    }
+
+
+    /* Number */
+
+    .story-item__number {
+        position: absolute;
+
+        left: -34px;
+
+        width: 28px;
+        height: 28px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 50%;
+
+        font-size: 0.68rem;
+
+        z-index: 3;
+    }
+
+
+    /* Story card */
+
+    .story-item__content {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 20px 18px;
+
+        border-radius: 18px;
+
+        text-align: left;
+    }
+
+
+    .story-item__date {
+        display: block;
+
+        font-size: 0.68rem;
+
+        line-height: 1.4;
+    }
+
+
+    .story-item__title {
+        margin-top: 7px;
+
+        font-size: 1.15rem;
+
+        line-height: 1.3;
+
+        overflow-wrap: anywhere;
+    }
+
+
+    .story-item__text {
+        margin-top: 10px;
+
+        font-size: 0.8rem;
+
+        line-height: 1.7;
+
+        overflow-wrap: anywhere;
+    }
+
+
+    /* Continue button */
+
+    .story-continue {
+        width: 100%;
+        max-width: 250px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* Side labels */
+
+    .story-side {
+        display: none;
     }
 
 }
 
-/*==================================================
-            SMALL MOBILE
-==================================================*/
 
-@media (max-width:480px){
+/* =========================================================
+   SMALL PHONES
+========================================================= */
 
-    .hero-title{
+@media (max-width: 380px) {
 
-        font-size:2.1rem;
+    /* Landing */
 
+    #landing {
+        padding: 16px 12px;
     }
 
-    #girlName{
-
-        font-size:1.7rem;
-
+    .landing-card {
+        padding: 30px 18px;
+        border-radius: 20px;
     }
 
-    .hero-content p{
-
-        font-size:.95rem;
-
+    .landing-card h1 {
+        font-size: 1.9rem;
     }
 
-    .gallery-header h2,
-    .gift-header h2,
-    .letter-header h2,
-    .timeline-header h2,
-    .reasons-header h2,
-    .favorites-header h2,
-    .finale-card h2{
-
-        font-size:2rem;
-
+    .landing-card p {
+        font-size: 0.82rem;
     }
 
-    #giftBox{
 
-        transform:scale(.72);
+    /* Hero */
 
+    #hero {
+        padding: 30px 12px;
     }
 
-    #envelope{
-
-        transform:scale(.82);
-
+    .hero-container {
+        padding: 32px 17px;
+        border-radius: 20px;
     }
 
-    .reason-card,
-    .favorite-card{
-
-        padding:28px 22px;
-
+    .hero-title {
+        font-size: 2rem;
     }
 
-    #celebrateBtn{
-
-        width:100%;
-
+    #girlName {
+        font-size: 1.7rem;
     }
 
-}
-
-/*==================================================
-            EXTRA SMALL
-==================================================*/
-
-@media (max-width:360px){
-
-    html{
-
-        font-size:14px;
-
+    #heroSubtitle {
+        font-size: 0.82rem;
     }
 
-    .hero-title{
 
-        font-size:1.8rem;
+    /* Timeline */
 
+    .story-content {
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
-    #giftBox{
-
-        transform:scale(.65);
-
+    .story-timeline {
+        padding-left: 36px;
     }
 
-    #envelope{
+    .story-timeline__line {
+        left: 12px;
+    }
 
-        transform:scale(.75);
+    .story-item__number {
+        left: -30px;
 
+        width: 25px;
+        height: 25px;
+
+        font-size: 0.62rem;
+    }
+
+    .story-item__content {
+        padding: 17px 15px;
+    }
+
+    .story-item__title {
+        font-size: 1.05rem;
+    }
+
+    .story-item__text {
+        font-size: 0.76rem;
     }
 
 }
